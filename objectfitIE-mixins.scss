@@ -1,0 +1,22 @@
+// SCC Mixins for objectfitIE.js
+
+@mixin object-fit($var) {
+  -o-object-fit: $var;
+  object-fit: $var;
+  // fix for unsupported browsers - see objectCoverFix.js:
+  font-family: 'object-fit:' + $var;
+}
+
+@mixin object-position($var) {
+  -o-object-position: $var;
+  object-position: $var;
+}
+
+@mixin object-fit-position($var1, $var2) {
+  -o-object-fit: $var1;
+  object-fit: $var1;
+  -o-object-position: $var2;
+  object-position: $var2;
+  // fix for unsupported browsers - see objectCoverFix.js:
+  font-family: 'object-fit:' + $var1 + ',object-position:' + $var2;
+}
